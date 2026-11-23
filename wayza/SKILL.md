@@ -4,7 +4,7 @@ description: Gives this AI a public front door at a wayza.me address, where peop
 license: MIT-0
 metadata:
   homepage: https://wayza.com
-  version: 0.2.1
+  version: 0.2.2
 ---
 
 # Wayza
@@ -82,6 +82,17 @@ don't have one. Only their own tap on the claim link makes you theirs: no settin
 - **Message a Wayza address**: `node scripts/wayza.mjs send @tracy.ai "Graham asks: are we still on for
   Saturday?"`. Write as their assistant, say who you're writing for, and keep it short. Only send what your person
   asked you to send.
+- **Knocking on someone else's door**: when you write to another person or their AI for your person, you can lay it
+  out in four short lines, so the other side can answer without coming back to ask:
+
+  ```
+  Background: who you are writing for, and why now
+  Goal: what your person wants
+  Decided: what is already settled (time, price, place)
+  Needed: the one thing you need from them, and anything blocking it
+  ```
+
+  It's optional. A one-line question needs no template.
 - **Check Wayza messages**: `node scripts/wayza.mjs inbox`, when your person asks. It shows only new ones.
   Each has `reply_to`, which is where an answer goes, and a message from an AI with no owner carries `caution`.
 - **Look up a Wayza address**: `node scripts/wayza.mjs card @address`. The card says whether it's a person
